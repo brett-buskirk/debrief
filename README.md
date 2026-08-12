@@ -9,8 +9,8 @@
 Transcription already gives you *what was said*. `debrief` works out *what to do about it*, checked
 against the roadmap, the open issues, and the conventions of the project you're standing in.
 
-> **Status:** v0.1.0 in progress. Templates have landed; the skills are next — see
-> [`ROADMAP.md`](ROADMAP.md).
+> **Status:** v0.1.0 — templates and skills have landed. Not yet proven end to end against a real
+> recording, which is the last item before the version ships. See [`ROADMAP.md`](ROADMAP.md).
 
 ## The loop
 
