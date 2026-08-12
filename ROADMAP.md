@@ -10,7 +10,8 @@ _What's planned for debrief — check items off as they ship._
 - [x] `debrief-intake` skill — recording to repo-aware brief
 - [x] `debrief-issues` skill — brief to wired issue drafts, dry-run by default
 - [x] `install.sh` — symlink the skills into `~/.claude/skills/`
-- [ ] Proven end to end against one real client meeting and one real brainstorm
+- [x] Proven end to end against one real client meeting (`patriot-academy`, 2026-07-23)
+- [ ] Proven end to end against one real brainstorm
 
 ## v0.2.0 — Round trip
 
