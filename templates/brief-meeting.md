@@ -20,6 +20,13 @@ issues: []   # filled in when issues are created
 
   Leave a section out when it's genuinely empty. Never invent a decision, a commitment, or a date
   that wasn't spoken; if it was implied, say so and put it in open questions.
+
+  Quote the note's author freely — their reasoning is the part worth preserving. Render every other
+  participant in paraphrase: their words are their information too, and this file is committed.
+
+  A call is often mostly about something other than the repo you're in. Say so in a scope note under
+  the TL;DR and let the brief be as thin as the material warrants — inflating it is a failure, not
+  thoroughness.
 -->
 
 
@@ -28,6 +35,9 @@ issues: []   # filled in when issues are created
 ## TL;DR
 
 <Two or three sentences. What this meeting changed.>
+
+<!-- Scope note, when most of the call was about something else. Omit if the whole call was in scope. -->
+**Scope note:** <what dominated the call, and that only the <this repo> portion is captured here.>
 
 ## Decisions made
 
@@ -61,6 +71,8 @@ issues: []   # filled in when issues are created
 ## Risks & open questions
 
 - **<risk or question>** — <why it matters; who can resolve it>
+- **Out of scope — <other project>** — <what came up about it, one line, and where it belongs.
+  Never filed as an issue against this repo.>
 
 ## Candidate issues
 
@@ -78,8 +90,15 @@ issues: []   # filled in when issues are created
 
 <!--
   Anything that may not belong in a repo: rates, payment terms, personal details, third-party
-  confidences, unflattering characterisations. Listed here so it's a deliberate call, not an
-  accident. Clear this section before the brief is committed.
+  confidences, unflattering characterisations.
+
+  Name the CATEGORY. Never reproduce the content in order to flag it — this file is committed, so a
+  quote here is as public as a quote anywhere else in it. "Commercial terms were discussed and are
+  excluded, see <where they went>" is the right shape. That keeps the omission a visible decision
+  rather than a silent filter, which is the point, without the content landing in the repo.
+
+  End with a line stating that nothing above is reproduced, only named, so a reader knows the
+  omission was deliberate.
 -->
 
-- <flagged item and where it appears>
+- **<category>** — discussed and deliberately excluded; <where it lives instead>.

@@ -30,4 +30,4 @@ for skill in "$HERE"/skills/*/; do
   linked=$((linked + 1))
 done
 
-printf '\n  %d linked, %d skipped. Restart Claude Code to pick them up.\n\n' "$linked" "$skipped"
+printf '\n  %d linked, %d skipped. A running session picks them up without a restart.\n\n' "$linked" "$skipped"

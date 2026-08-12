@@ -75,13 +75,36 @@ Read `plaud-shared` first if no Plaud tool has been called yet this session.
    loses the actual thought.
 
 8. **Flag sensitive content** under `⚠ Sensitive — review before commit`: rates, payment terms,
-   personal or medical detail, third-party confidences, unflattering characterisations. **Surface it,
-   don't silently drop it** — quiet filtering hides a judgment call that belongs to the human.
+   personal or medical detail, third-party confidences, unflattering characterisations.
 
-9. **Write the brief** to `docs/intake/YYYY-MM-DD-<slug>.md`, frontmatter first with `recording_id`
-   populated. The committed briefs are the ledger, and that field is what makes a re-run idempotent.
+   **Name the category; never quote the content.** "Commercial terms were discussed and are excluded"
+   is the right shape. Reproducing the terms in order to flag them defeats the flag — the brief is a
+   tracked file, and a quote in the sensitive section is just as committed as a quote anywhere else.
+   Naming it keeps the omission a visible decision rather than a silent filter, which is the whole
+   point, without the content landing in the repo.
 
-10. **Land it by PR** — never a direct commit to the default branch:
+   Two categories are absolute, not judgment calls: **anything the repo's own docs designate as
+   confidential** (follow the profile's "Where things go"), and **anything covered by a positioning
+   or personal-history rule** in `CLAUDE.md`. Those don't get quoted even to be flagged.
+
+9. **Paraphrase third parties.** Where someone other than the note's author is in the room, their
+   words are their information as much as the project's. Quote the author freely — their reasoning is
+   the part worth preserving — but render other participants in paraphrase, and keep any
+   characterisation of a third party's commercial position out of a tracked file entirely. A private
+   repo can be made public later; a quote written today has to survive that.
+
+10. **Write the brief** to `docs/intake/YYYY-MM-DD-<slug>.md`, frontmatter first with `recording_id`
+    populated. The committed briefs are the ledger, and that field is what makes a re-run idempotent.
+
+    **Name the file for what's in scope, not for what the recording is called.** A recording titled
+    for its commercial half shouldn't put that in a path that lands in git history.
+
+    **A short brief is a correct brief.** A call can be mostly out of scope for the repo you're in;
+    say so in a scope note near the top and let the brief be as thin as the material warrants.
+    Inflating twenty minutes of relevant conversation into a full-looking document is a failure, not
+    thoroughness.
+
+11. **Land it by PR** — never a direct commit to the default branch:
     ```bash
     git checkout -b docs/intake-<slug>
     git branch --show-current          # confirm: an aborted checkout leaves you on the default branch
@@ -91,7 +114,7 @@ Read `plaud-shared` first if no Plaud tool has been called yet this session.
     ```
     Wire the PR up completely per the repo's conventions — assignee, labels, milestone, board.
 
-11. **Show the user the brief**, and point at the two things that need their eye: the `⚠ Sensitive`
+12. **Show the user the brief**, and point at the two things that need their eye: the `⚠ Sensitive`
     section, and anything left as an open question.
 
 ## Hard rules
@@ -100,6 +123,8 @@ Read `plaud-shared` first if no Plaud tool has been called yet this session.
   its own skill and its own approval gate.
 - **Raw transcripts never enter a repo.** Local scratch only.
 - **Never batch.** One named recording per run.
+- **Name sensitive content, never quote it.** Flagging a confidence by reproducing it commits it.
+- **Paraphrase third parties.** Quote the note's author; render everyone else in your own words.
 - **Cite, don't assert.** "Already planned" needs an issue number behind it.
 - **Never invent** a decision, a commitment, a date, or a specific that wasn't in the recording.
 - **Confirm the branch before committing.** An aborted checkout has silently left work on the default

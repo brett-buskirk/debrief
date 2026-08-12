@@ -116,4 +116,11 @@ B", "the playbook is idempotent on a second run">
   <the current one, or "none — this repo runs on its ROADMAP">. Board: <e.g. Estate project #17>.
 - **Briefs:** `docs/intake/YYYY-MM-DD-<slug>.md`, landed by pull request.
 - **Not yet actionable:** the parking lot in the brief — <or an external notes vault / task ledger>.
-- **Never committed:** raw transcripts, and anything sensitive flagged during review.
+- **Confidential by category:** <what this project treats as confidential, and where it goes instead —
+  e.g. "commercial terms live in `dev-notes/` (gitignored) and never enter a tracked file". Name the
+  category in the brief; never reproduce the content in order to flag it.>
+- **Other projects in the same recording:** <one conversation routinely covers more than one project.
+  Name the ones that come up here and where they belong. They go to open questions as out of scope —
+  never filed as an issue against this repo.>
+- **Never committed:** raw transcripts; anything in the confidential categories above; direct quotes
+  from third parties (paraphrase them instead).

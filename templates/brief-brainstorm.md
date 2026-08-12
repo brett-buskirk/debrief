@@ -63,4 +63,10 @@ issues: []   # filled in when issues are created
 
 ## ⚠ Sensitive — review before commit
 
-<!-- Usually empty for a solo note. Clear it before committing if it isn't. -->
+<!--
+  Usually empty for a solo note — but a solo note wanders, and a project repo is not the place for
+  where it wandered to. Name the category and leave the content out; never reproduce something in
+  order to flag it.
+-->
+
+- **<category>** — discussed and deliberately excluded; <where it lives instead>.

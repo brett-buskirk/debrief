@@ -9,8 +9,8 @@
 Transcription already gives you *what was said*. `debrief` works out *what to do about it*, checked
 against the roadmap, the open issues, and the conventions of the project you're standing in.
 
-> **Status:** v0.1.0 — templates and skills have landed. Not yet proven end to end against a real
-> recording, which is the last item before the version ships. See [`ROADMAP.md`](ROADMAP.md).
+> **Status:** v0.1.0 — templates and skills have landed and the loop has been run end to end against
+> a real client meeting. See [`ROADMAP.md`](ROADMAP.md).
 
 ## The loop
 
@@ -58,6 +58,8 @@ work. A stale profile produces confident, wrong briefs, so keep it current.
 git clone git@github.com:brett-buskirk/debrief.git ~/github-repos/debrief
 ~/github-repos/debrief/install.sh     # symlinks skills/* into ~/.claude/skills/
 ```
+
+A running Claude Code session picks the skills up without a restart.
 
 Then, in any repo you want to use it on, generate the profile once and edit what it drafts.
 
