@@ -6,10 +6,10 @@ _What's planned for debrief — check items off as they ship._
 
 - [x] Intake profile template (`templates/PROFILE.md`) — the generalized per-repo context file
 - [x] Brief skeletons — client meeting and brainstorm
-- [ ] `debrief-profile` skill — draft a repo's profile from its own docs
-- [ ] `debrief-intake` skill — recording to repo-aware brief
-- [ ] `debrief-issues` skill — brief to wired issue drafts, dry-run by default
-- [ ] `install.sh` — symlink the skills into `~/.claude/skills/`
+- [x] `debrief-profile` skill — draft a repo's profile from its own docs
+- [x] `debrief-intake` skill — recording to repo-aware brief
+- [x] `debrief-issues` skill — brief to wired issue drafts, dry-run by default
+- [x] `install.sh` — symlink the skills into `~/.claude/skills/`
 - [ ] Proven end to end against one real client meeting and one real brainstorm
 
 ## v0.2.0 — Round trip
