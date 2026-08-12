@@ -2,5 +2,31 @@
 
 _What's planned for debrief — check items off as they ship._
 
-## Next
-- [ ] Define the first milestone.
+## v0.1.0 — Foundation
+
+- [x] Intake profile template (`templates/PROFILE.md`) — the generalized per-repo context file
+- [x] Brief skeletons — client meeting and brainstorm
+- [ ] `debrief-profile` skill — draft a repo's profile from its own docs
+- [ ] `debrief-intake` skill — recording to repo-aware brief
+- [ ] `debrief-issues` skill — brief to wired issue drafts, dry-run by default
+- [ ] `install.sh` — symlink the skills into `~/.claude/skills/`
+- [ ] Proven end to end against one real client meeting and one real brainstorm
+
+## v0.2.0 — Round trip
+
+- [ ] Generate the Plaud-side capture template from `PROFILE.md`, so the two renderings of the same
+      project context cannot drift apart
+- [ ] Migrate `day-one/docs/plaud/` onto the generalized profile (it's the reference implementation)
+- [ ] Local index of processed recordings — a fast idempotency check; the committed briefs stay the
+      source of truth and the index can be rebuilt from them
+
+## v0.3.0 — Range
+
+- [ ] Multi-recording digest — a week of notes rolled into one brief
+- [ ] Commitment tracking across briefs: what was promised, and what actually shipped
+
+## Later
+
+- [ ] Extract a CLI for the deterministic half — fetch, index, and issue wiring — so the workflow
+      runs outside Claude Code and under cron
+- [ ] Public release, once it has been used enough to trust and sanitized of client specifics
