@@ -7,6 +7,10 @@ All notable changes to debrief are documented here. The format is based on
 ## [Unreleased]
 
 ### Changed
+- README now documents **how to actually set the tool up and use it**: a per-machine install, a
+  per-repo setup step that says what to ask for and which sections need hand-editing afterwards, and
+  the three-step usage loop with its three approval gates. It previously said the profile was
+  "generated, then edited by hand" without ever saying how to generate it.
 - Sensitive content is **named by category, never quoted**. Reproducing a confidence in order to flag
   it commits it — the brief is a tracked file. Found by running the loop against a real client call.
 - Third parties are **paraphrased, not quoted**. Their words are their information, and a private

@@ -41,18 +41,9 @@ half of a request is new scope is the difference between a change order and unpa
 what "done" looks like, and the path — quick action, measure first, or discuss first. Half-formed
 thoughts land in a **parking lot** rather than getting forced into issues they aren't ready for.
 
-## The intake profile
-
-A transcript is only actionable if the reader knows the project. That knowledge lives in one file
-per repo, [`docs/intake/PROFILE.md`](templates/PROFILE.md) — the role to read the note in, the
-handful of facts that frame it, the terms transcription reliably mangles, the type taxonomy mapped
-to *this* repo's labels, and the constraints a proposal must never break.
-
-The profile is generated from the repo's own `CLAUDE.md`, `ROADMAP.md`, and `README.md`, then edited
-by hand. The parts only you know — the why, the north stars, the vocabulary — are what make it
-work. A stale profile produces confident, wrong briefs, so keep it current.
-
 ## Install
+
+Once per machine.
 
 ```sh
 git clone git@github.com:brett-buskirk/debrief.git ~/github-repos/debrief
@@ -61,7 +52,72 @@ git clone git@github.com:brett-buskirk/debrief.git ~/github-repos/debrief
 
 A running Claude Code session picks the skills up without a restart.
 
-Then, in any repo you want to use it on, generate the profile once and edit what it drafts.
+## Set up a repo
+
+Once per repo you want to use it on.
+
+A transcript is only actionable if the reader knows the project, and that knowledge lives in one
+file: `docs/intake/PROFILE.md`. **You don't write it by hand and you don't copy the template.** Open
+a Claude Code session in the repo and ask:
+
+```
+cd ~/github-repos/<repo>
+```
+
+> set up debrief here
+
+That runs `debrief-profile`, which reads the repo's own `CLAUDE.md`, `README.md`, `ROADMAP.md`,
+labels, and milestones, fills in [`templates/PROFILE.md`](templates/PROFILE.md), and opens a PR
+adding `docs/intake/PROFILE.md`.
+
+**Then edit what it drafted before merging.** It leaves a literal `<TODO: …>` wherever the repo's
+docs didn't answer a question, and three sections carry knowledge that isn't written down anywhere
+in the repo:
+
+- **Vocabulary** — the project nouns transcription reliably mangles. The cheapest accuracy win in
+  the file, and it should grow every time a brief gets a term wrong.
+- **Constraints / north stars** — what a proposal must never break, so a brief can flag a conflict
+  instead of cheerfully proposing something you've already ruled out.
+- **Definition of done** — what a concrete acceptance check looks like in this project.
+
+A stale profile doesn't fail loudly; it produces confident, wrong briefs. Keep it current.
+
+## Use it
+
+Three steps and three separate approvals — nothing compounds from a single "looks good."
+
+**1. Brief a recording.** Stand in the repo it's about and name it:
+
+> debrief cad5361f40143a96f51185a02e6a321e
+
+`debrief-intake` fetches the polished transcript, picks **meeting** or **brainstorm** from the
+speaker count, loads the profile alongside your roadmap and open issues, writes the brief to
+`docs/intake/YYYY-MM-DD-<slug>.md`, and opens a PR. It creates no issues.
+
+**2. Review the brief PR.** Two things want your eye: the `⚠ Sensitive` section, and anything left
+as an open question. Merge when it reads true.
+
+**3. File the issues** — the gated step:
+
+> make the issues
+
+`debrief-issues` reads only the brief's **Candidate issues** section, checks your existing issues for
+near-duplicates, then prints a dry-run table with each full issue body and **stops**. Nothing is
+created until you give a go-ahead for that specific set; approval never carries between runs.
+
+The phrasings above aren't magic words — each skill matches on its `description`, so anything close
+works ("create the intake profile", "turn this recording into a brief", "file these"). Naming the
+skill directly works too.
+
+### Finding a recording ID
+
+```sh
+plaud recent --days 30          # the last month
+plaud search "weekly sync"      # by name keyword
+plaud today
+```
+
+Or just ask in the session: *what recordings do I have from last week?*
 
 ## Requirements
 
