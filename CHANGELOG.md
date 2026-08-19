@@ -6,6 +6,12 @@ All notable changes to debrief are documented here. The format is based on
 
 ## [Unreleased]
 
+### Fixed
+- `templates/brief-brainstorm.md` gained the **Candidate issues** section it was missing.
+  `debrief-issues` reads that section and nothing else, so every brainstorm brief was a dead end
+  at the issues step — the skeleton had no place to hand work over. Found by running the loop
+  against a real brainstorm, which is what that roadmap item exists to catch.
+
 ### Changed
 - README now documents **how to actually set the tool up and use it**: a per-machine install, a
   per-repo setup step that says what to ask for and which sections need hand-editing afterwards, and

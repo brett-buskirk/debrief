@@ -103,6 +103,12 @@ straightforward the change looks.
   from everything else would mean less to filter downstream. **This connection was not made in the
   recording** — noted here because it may make the item cheaper, and parked rather than assumed.
 
+## Candidate issues
+
+_None._ The single item is routed **discuss first** — it turns on whether "personal noise" becomes a
+third bucket alongside relevant and sensitive, and that resolution touches non-negotiable 5. Filing
+an issue would presuppose the answer. The parking-lot item is not ready either.
+
 ## ⚠ Sensitive — review before commit
 
 - **None.** The recording names "the weekend" and "dinner" as illustrations of a category to filter,
