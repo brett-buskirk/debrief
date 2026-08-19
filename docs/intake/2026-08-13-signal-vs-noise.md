@@ -94,6 +94,22 @@ straightforward the change looks.
   option, not a conclusion.**
 - Does this apply to the meeting delta as well, or only to brainstorms?
 
+### Resolved — 2026-08-19
+
+Settled in favour of **narrowing the definition rather than adding a category** (#8).
+
+The brief framed this as a missing third bucket. On re-reading the skill that was slightly off: step 4
+already drops filler without ceremony and step 10's scope note already handles out-of-scope material,
+so the entire defect sat in one phrase in step 8 — "personal or medical detail," which triggers on a
+subject being personal rather than on it being sensitive. That phrase now reads "personal detail that
+is genuinely sensitive — health, family, legal, financial," and step 4 says outright that mundane
+non-project talk is not carried.
+
+**Non-negotiable 5 was not amended.** Nothing was relaxed, so the rule keeps its full force over the
+material it was written for — which is the outcome this brief argued for, reached without touching a
+non-negotiable. The open question about where the boundary sits is answered by that list; the
+"visible trace" option and the meeting-delta question were not taken up.
+
 ---
 
 ## Parking lot

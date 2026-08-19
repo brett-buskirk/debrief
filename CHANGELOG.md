@@ -7,6 +7,12 @@ All notable changes to debrief are documented here. The format is based on
 ## [Unreleased]
 
 ### Fixed
+- Sensitive-content flagging triggers on **sensitivity, not personal-ness**. Step 8 read "personal or
+  medical detail," which swept up mundane chatter — a mention of dinner would be named as a category
+  under the sensitive block of a tracked file, giving trivia permanence and burying real flags. It now
+  reads "personal detail that is genuinely sensitive — health, family, legal, financial," and step 4
+  says plainly that mundane non-project conversation is dropped like filler. Non-negotiable 5 is
+  unchanged: nothing was relaxed. Raised by the 2026-08-13 brainstorm.
 - `templates/brief-brainstorm.md` gained the **Candidate issues** section it was missing.
   `debrief-issues` reads that section and nothing else, so every brainstorm brief was a dead end
   at the issues step — the skeleton had no place to hand work over. Found by running the loop
