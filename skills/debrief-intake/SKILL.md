@@ -57,6 +57,12 @@ Read `plaud-shared` first if no Plaud tool has been called yet this session.
    a gap is an open question, not something to fill with a plausible guess. Preserve the reasoning in
    the speaker's own words where it carries the "why"; that's the part worth keeping.
 
+   **Mundane non-project conversation is not carried** — the weekend, dinner, small talk. It goes the
+   way filler goes: dropped without ceremony, because it is noise rather than a confidence. Do not
+   route it to the sensitive block; naming "personal detail" there to describe someone's dinner gives
+   trivia a permanent home in a tracked file and buries the real flags in chatter. The distinction is
+   sensitivity, not personal-ness — see step 8.
+
 5. **Classify each distinct item** using the profile's taxonomy. One note routinely holds several
    unrelated items — separate them, and order by importance rather than by when they were said.
 
@@ -75,7 +81,13 @@ Read `plaud-shared` first if no Plaud tool has been called yet this session.
    loses the actual thought.
 
 8. **Flag sensitive content** under `⚠ Sensitive — review before commit`: rates, payment terms,
-   personal or medical detail, third-party confidences, unflattering characterisations.
+   personal detail that is genuinely sensitive — health, family, legal, financial — third-party
+   confidences, unflattering characterisations.
+
+   **Sensitivity is the trigger, not personal-ness.** "A co-founder is unwell" is a flag; what
+   someone ate is not, and step 4 already dropped it. When a personal subject is genuinely
+   ambiguous, flag it — over-flagging costs a line the human deletes, while under-flagging is
+   the silent filter non-negotiable 5 exists to prevent.
 
    **Name the category; never quote the content.** "Commercial terms were discussed and are excluded"
    is the right shape. Reproducing the terms in order to flag them defeats the flag — the brief is a
