@@ -7,6 +7,10 @@ All notable changes to debrief are documented here. The format is based on
 ## [Unreleased]
 
 ### Fixed
+- Meetings judge an apparently-personal remark on **relevance, not register**. Dropping mundane talk
+  is safe in a solo brainstorm but wrong on a client call, where capacity, absence, reorgs, budget,
+  and timing arrive as small talk and are often the most decision-relevant thing said — and where the
+  delta's Changed scope section depends on exactly that context. Caught while scoping the previous fix.
 - Sensitive-content flagging triggers on **sensitivity, not personal-ness**. Step 8 read "personal or
   medical detail," which swept up mundane chatter — a mention of dinner would be named as a category
   under the sensitive block of a tracked file, giving trivia permanence and burying real flags. It now
