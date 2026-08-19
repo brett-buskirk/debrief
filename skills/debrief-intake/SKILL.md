@@ -63,6 +63,13 @@ Read `plaud-shared` first if no Plaud tool has been called yet this session.
    trivia a permanent home in a tracked file and buries the real flags in chatter. The distinction is
    sensitivity, not personal-ness — see step 8.
 
+   **In a meeting, judge a remark on relevance, not on register.** The rule above is safe for a solo
+   brainstorm, where personal-sounding talk really is noise. A client call is the opposite: capacity,
+   absence, reorgs, budget, and timing arrive as small talk and are often the most decision-relevant
+   thing said. "We're slammed since the reorg" is not chatter — it is the reason a date moves, and the
+   delta's **Changed scope** section is worthless without it. Carry the substance, drop the pleasantry.
+   Where such a remark is also personal to a third party, step 9 already applies: paraphrase it.
+
 5. **Classify each distinct item** using the profile's taxonomy. One note routinely holds several
    unrelated items — separate them, and order by importance rather than by when they were said.
 
