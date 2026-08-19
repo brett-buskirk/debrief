@@ -11,7 +11,9 @@ _What's planned for debrief — check items off as they ship._
 - [x] `debrief-issues` skill — brief to wired issue drafts, dry-run by default
 - [x] `install.sh` — symlink the skills into `~/.claude/skills/`
 - [x] Proven end to end against one real client meeting (`patriot-academy`, 2026-07-23)
-- [ ] Proven end to end against one real brainstorm
+- [ ] Proven end to end against one real brainstorm — the intake half is proven
+      (2026-08-13, #6); the issues half is not, because that brief's only item is
+      discuss-first and yields no candidates. Needs a brainstorm that produces one.
 
 ## v0.2.0 — Round trip
 

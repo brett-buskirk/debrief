@@ -61,6 +61,28 @@ issues: []   # filled in when issues are created
 
 - <the thought, and what it's waiting on>
 
+## Candidate issues
+
+<!--
+  The handoff into `debrief-issues`, which reads this section and nothing else. One block per issue
+  to be drafted, and everything here has to be actionable exactly as written.
+
+  An item reaches this section only once its path is settled. Anything still marked "discuss first"
+  or "measure first" stays where it is, and parking-lot items never come here. That routing is the
+  gate; pulling an unresolved thought forward is what defeats it.
+
+  Empty is a normal outcome for a brainstorm — a note that raised one hard question should produce
+  no issues at all. Write the "None" line rather than deleting the heading, so the skill finds an
+  explicit answer instead of a missing section.
+-->
+
+_None — <why: every item is still discuss-first, or parked>._
+
+### <issue title>
+- **Type / labels:** <type> · `needs-triage`
+- **Why:** <the reason, in your own words from the note>
+- **Done looks like:** <acceptance check>
+
 ## ⚠ Sensitive — review before commit
 
 <!--
