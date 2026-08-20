@@ -18,17 +18,6 @@ name: AgentGate
 # Either would run a stranger's code with a write-scoped token, which is the
 # standard way this trigger becomes a repository takeover.
 on:
-  # `pull_request` is TRANSITIONAL and is removed in the immediate follow-up PR.
-  #
-  # Changing a workflow's trigger has a chicken-and-egg problem: `pull_request`
-  # runs the workflow file from the PR head, while `pull_request_target` runs the
-  # copy on the base branch. Dropping the old trigger in one step means neither
-  # fires — the head no longer asks for `pull_request`, and the base does not yet
-  # know about `pull_request_target` — so the required `agentgate` check never
-  # reports and the PR is blocked. Keeping both for exactly one merge closes that
-  # gap; the follow-up then drops `pull_request` from a base that already carries
-  # `pull_request_target`.
-  pull_request:
   pull_request_target:
 
 permissions:
