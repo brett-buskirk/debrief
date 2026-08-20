@@ -1,0 +1,37 @@
+name: Skill behaviour
+description: A skill misread a transcript, over-reached, or skipped a step it was told to take
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This project has no test suite — a failing run *is* the evidence. The more of it you can
+        capture while you still have it, the better.
+  - type: dropdown
+    id: skill
+    attributes:
+      label: Which skill
+      options: ["debrief-profile", "debrief-intake", "debrief-issues", "not sure"]
+    validations:
+      required: true
+  - type: input
+    id: step
+    attributes:
+      label: Which step
+      description: The numbered step in that skill's SKILL.md, if you can tell.
+      placeholder: "step 8 — flag sensitive content"
+  - type: textarea
+    id: expected
+    attributes:
+      label: What the step says should happen, and what happened instead
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: The run
+      description: >
+        Which repo you were standing in, and roughly what the recording was — one voice or several,
+        how long, what it covered. **Do not paste the transcript**; raw transcripts never enter a repo.
+    validations:
+      required: true

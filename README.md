@@ -126,6 +126,8 @@ Or just ask in the session: *what recordings do I have from last week?*
   authenticate. The structured tools are what `debrief` reads; the
   [CLI](https://docs.plaud.ai/plaud-mcp-cli/cli) is handy alongside but prints prose, not JSON.
 - [`gh`](https://cli.github.com/), authenticated, with the `project` scope if you use a board.
+- **macOS, Linux, or WSL.** `install.sh` is bash, and the skills reach their templates through
+  symlinks — which native Windows only follows with developer mode enabled. WSL is the easy path.
 
 ## Safety
 
