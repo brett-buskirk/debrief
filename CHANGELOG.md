@@ -13,6 +13,8 @@ All notable changes to debrief are documented here. The format is based on
   contributor's mistake. The workflow now uses `pull_request_target`, which runs in the base
   repository's context with a writable token. Safe here specifically because nothing checks out or
   executes the PR's code: AgentGate reads the diff over the API and its config from the base branch.
+  Landed over two merges: the trigger swap had to keep `pull_request` for one merge, because
+  changing it in a single step fires neither trigger and leaves the required check unreported.
 
 ## [0.1.0] — 2026-08-20
 
