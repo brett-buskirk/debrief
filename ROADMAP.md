@@ -27,6 +27,9 @@ _What's planned for debrief — check items off as they ship._
 
 - [ ] Multi-recording digest — a week of notes rolled into one brief
 - [ ] Commitment tracking across briefs: what was promised, and what actually shipped
+- [ ] Scaffold hand-off — a brainstorm about a project that does not exist yet points at a
+      configured `scaffold_command` instead of dead-ending. Designed, not scheduled:
+      [`docs/design/scaffold-handoff.md`](docs/design/scaffold-handoff.md)
 
 ## Later
 

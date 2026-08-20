@@ -92,6 +92,23 @@ rather than clarifies. There is a design worth having, but not before the rule q
   nothing to read, so the profile would have to come from the brainstorm itself — which is a more
   interesting idea than the scaffolding, and unaddressed in the note.
 
+### Resolved — 2026-08-20
+
+Settled without amending non-negotiable 4, and without asking anything of `huginn`. Full reasoning in
+[`docs/design/scaffold-handoff.md`](../design/scaffold-handoff.md).
+
+`debrief` will not create repositories, and `huginn` will not learn about Plaud. Instead the
+dependency points the other way: `debrief` derives a name and description from the brainstorm and
+hands off to a **configured** `scaffold_command`, so the estate-specific part lives in config rather
+than in behaviour. `huginn new <name> --desc "…" --private --dry-run` already accepts exactly that,
+so the design requires zero changes to it.
+
+The `huginn new --plaud <id>` option raised after this brief was written was rejected for the mirror
+of the reason `debrief` was not given repo-creating powers: a public scaffolder should no more
+hard-wire one vendor's voice service than a public voice tool should hard-wire one person's
+conventions. The three open questions above stand, and the profile-from-brainstorm one is now the
+most valuable part of the idea.
+
 ---
 
 ## Parking lot

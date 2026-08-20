@@ -6,6 +6,11 @@ All notable changes to debrief are documented here. The format is based on
 
 ## [Unreleased]
 
+### Added
+- `docs/design/scaffold-handoff.md` — how a brainstorm about a project that does not exist yet should
+  reach a repo. Settles it without amending non-negotiable 4 and without asking anything of `huginn`:
+  `debrief` hands off to a configured `scaffold_command` rather than creating repositories itself.
+
 ### Fixed
 - Fork pull requests now get a real AgentGate run. On `pull_request` a fork's `GITHUB_TOKEN` is
   read-only whatever the permissions block says, so AgentGate could not post its result — and since
