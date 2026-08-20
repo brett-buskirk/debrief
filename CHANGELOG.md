@@ -6,7 +6,13 @@ All notable changes to debrief are documented here. The format is based on
 
 ## [Unreleased]
 
-_Nothing yet._
+### Fixed
+- Fork pull requests now get a real AgentGate run. On `pull_request` a fork's `GITHUB_TOKEN` is
+  read-only whatever the permissions block says, so AgentGate could not post its result — and since
+  `agentgate` is a required status check, every external PR was blocked by what looked like the
+  contributor's mistake. The workflow now uses `pull_request_target`, which runs in the base
+  repository's context with a writable token. Safe here specifically because nothing checks out or
+  executes the PR's code: AgentGate reads the diff over the API and its config from the base branch.
 
 ## [0.1.0] — 2026-08-20
 

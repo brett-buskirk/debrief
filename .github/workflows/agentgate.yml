@@ -1,5 +1,24 @@
 name: AgentGate
-on: [pull_request]
+
+# `pull_request_target`, not `pull_request`.
+#
+# A fork's GITHUB_TOKEN is read-only on `pull_request` regardless of the
+# permissions block below, so AgentGate cannot post its result. The job fails,
+# and because `agentgate` is a *required* status check, every external PR is
+# blocked by what looks like the contributor's mistake. `pull_request_target`
+# runs in the base repository's context with a writable token, so forks get the
+# same real gate that branch PRs get.
+#
+# SAFETY — read before editing:
+# This trigger is only safe because nothing here ever checks out or executes the
+# pull request's code. AgentGate reads the diff through the GitHub API and its
+# config from the base branch, so the fork's tree is never touched.
+#   * Do NOT add `ref:` to the checkout below to fetch the PR head.
+#   * Do NOT add a build, install, or test step.
+# Either would run a stranger's code with a write-scoped token, which is the
+# standard way this trigger becomes a repository takeover.
+on:
+  pull_request_target:
 
 permissions:
   contents: read
@@ -8,9 +27,14 @@ permissions:
   statuses: write
 
 jobs:
+  # The job id is the required status check context — renaming it will block
+  # every PR until the ruleset is updated to match.
   agentgate:
     runs-on: ubuntu-latest
     steps:
+      # No `ref:` on purpose. This checks out the base branch, so `.agentgate.yml`
+      # is the trusted committed config rather than whatever the PR proposes —
+      # a PR cannot relax the guardrail that is judging it.
       - uses: actions/checkout@v4
       - uses: brett-buskirk/agent-gate@v1
         with:
