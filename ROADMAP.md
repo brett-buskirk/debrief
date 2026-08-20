@@ -10,10 +10,10 @@ _What's planned for debrief — check items off as they ship._
 - [x] `debrief-intake` skill — recording to repo-aware brief
 - [x] `debrief-issues` skill — brief to wired issue drafts, dry-run by default
 - [x] `install.sh` — symlink the skills into `~/.claude/skills/`
-- [x] Proven end to end against one real client meeting (`patriot-academy`, 2026-07-23)
-- [ ] Proven end to end against one real brainstorm — the intake half is proven
-      (2026-08-13, #6); the issues half is not, because that brief's only item is
-      discuss-first and yields no candidates. Needs a brainstorm that produces one.
+- [x] Proven end to end against one real client meeting (2026-07-23)
+- [x] Proven end to end against one real brainstorm — `day-one`, 2026-08-20: brief, two
+      issues filed against the repo's own labels, and the issue numbers written back to the
+      brief's frontmatter
 
 ## v0.2.0 — Round trip
 
@@ -32,4 +32,5 @@ _What's planned for debrief — check items off as they ship._
 
 - [ ] Extract a CLI for the deterministic half — fetch, index, and issue wiring — so the workflow
       runs outside Claude Code and under cron
-- [ ] Public release, once it has been used enough to trust and sanitized of client specifics
+- [ ] Public release — the tree is sanitized of client specifics and the loop has run against
+      both a real meeting and a real brainstorm. Flipping visibility is the remaining step.
