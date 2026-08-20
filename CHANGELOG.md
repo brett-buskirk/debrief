@@ -6,6 +6,10 @@ All notable changes to debrief are documented here. The format is based on
 
 ## [Unreleased]
 
+_Nothing yet._
+
+## [0.1.0] — 2026-08-20
+
 ### Fixed
 - Meetings judge an apparently-personal remark on **relevance, not register**. Dropping mundane talk
   is safe in a solo brainstorm but wrong on a client call, where capacity, absence, reorgs, budget,

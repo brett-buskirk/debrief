@@ -9,8 +9,9 @@
 Transcription already gives you *what was said*. `debrief` works out *what to do about it*, checked
 against the roadmap, the open issues, and the conventions of the project you're standing in.
 
-> **Status:** v0.1.0 — templates and skills have landed and the loop has been run end to end against
-> a real client meeting. See [`ROADMAP.md`](ROADMAP.md).
+> **Status:** v0.1.0 — templates and skills have landed, and the full loop (brief → issues) has
+> been run end to end against both a real client meeting and a real brainstorm. See
+> [`ROADMAP.md`](ROADMAP.md).
 
 ## The loop
 
