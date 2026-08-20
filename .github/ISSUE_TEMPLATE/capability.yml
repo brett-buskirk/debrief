@@ -1,0 +1,29 @@
+name: Capability
+description: New behaviour in an existing skill, a new skill, or a change to a template
+labels: ["enhancement", "needs-triage"]
+body:
+  - type: textarea
+    id: want
+    attributes:
+      label: What you want it to do
+    validations:
+      required: true
+  - type: input
+    id: owner
+    attributes:
+      label: Which skill owns it
+      description: Or say if you think it wants a new one.
+      placeholder: "debrief-intake"
+  - type: input
+    id: trigger
+    attributes:
+      label: What you'd say out loud to trigger it
+      description: >
+        A skill's `description` frontmatter is its entire retrieval mechanism, so the phrasing you'd
+        actually use matters more than the feature name.
+      placeholder: "roll last week's recordings into one brief"
+  - type: textarea
+    id: done
+    attributes:
+      label: What "done" would look like
+      description: An acceptance check. Here that usually means what a run against a real recording should produce.
