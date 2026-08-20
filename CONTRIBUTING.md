@@ -25,6 +25,16 @@ intended loop.
 - **Agent-authored commits** end with a `Co-Authored-By:` trailer naming the model that wrote them.
 - **One focused change per PR**, small enough to read in full.
 
+### Contributing from a fork
+
+Fork pull requests get the same AgentGate check that branch PRs get. Two things follow from how that
+is wired, and both will otherwise look like bugs:
+
+- **The guardrail config is read from `main`, not from your branch.** A PR that edits `.agentgate.yml`
+  or the workflow itself will not see those edits applied to its own run — they take effect after
+  merge. That is deliberate: a pull request should not be able to relax the check that is judging it.
+- **Config changes belong in their own PR.** Don't bundle a guardrail change into a feature change.
+
 ## Things that are not style preferences
 
 These are the project's non-negotiables, listed in full in [`CLAUDE.md`](CLAUDE.md). A change that
