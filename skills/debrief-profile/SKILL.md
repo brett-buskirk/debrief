@@ -33,8 +33,8 @@ the point of having one.
    gh api repos/:owner/:repo/milestones --jq '.[].title'
    gh repo view --json owner,isPrivate,defaultBranchRef
    ```
-   Note whether this is one of Brett's own repos (full estate wiring, Estate board) or someone
-   else's (local conventions only, no estate board).
+   Note whether this is one of Brett's own repos (full estate wiring; issues sync to Linear via its
+   GitHub integration) or someone else's (local conventions only, no estate wiring).
 
 4. **Fill the template** at `templates/PROFILE.md` — alongside this skill, via symlink; if it isn't
    readable, resolve with `readlink -f ~/.claude/skills/debrief-profile` and look two levels up.

@@ -113,7 +113,8 @@ B", "the playbook is idempotent on a second run">
 <!-- The mechanical wiring, so issues come out conventional rather than improvised. -->
 
 - **Issues:** labels per the table above, plus `needs-triage` on everything generated. Milestone:
-  <the current one, or "none — this repo runs on its ROADMAP">. Board: <e.g. Estate project #17>.
+  <the current one, or "none — this repo runs on its ROADMAP">. Tracking: <e.g. Linear (auto-synced
+  from GitHub), or "none">.
 - **Briefs:** `docs/intake/YYYY-MM-DD-<slug>.md`, landed by pull request.
 - **Not yet actionable:** the parking lot in the brief — <or an external notes vault / task ledger>.
 - **Confidential by category:** <what this project treats as confidential, and where it goes instead —

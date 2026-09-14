@@ -1,6 +1,6 @@
 ---
 name: debrief-issues
-description: "Draft GitHub issues from a debrief brief — wired to the repo's own conventions (labels, assignee, milestone, board) — show them for approval, and create them only on the user's explicit word. Use after a brief exists and the user says 'make the issues', 'file these', or 'turn the brief into tickets'."
+description: "Draft GitHub issues from a debrief brief — wired to the repo's own conventions (labels, assignee, milestone) — show them for approval, and create them only on the user's explicit word. Use after a brief exists and the user says 'make the issues', 'file these', or 'turn the brief into tickets'."
 ---
 
 # debrief — issues
@@ -24,14 +24,14 @@ anything else.
 
 2. **Detect which conventions apply.** These repos are not all the same:
    - **Brett's own repo** (owner `brett-buskirk`, living under `~/github-repos`) — full estate
-     wiring: `--assignee brett-buskirk`, base + scope labels, the current milestone, and the Estate
-     board.
+     wiring: `--assignee brett-buskirk`, base + scope labels, and the current milestone. These repos
+     sync to **Linear** via its GitHub integration, so there's no manual board step.
    - **Anyone else's repo** — the repo's own conventions win. Read what actually exists:
      ```bash
      gh label list --limit 100
      gh api repos/:owner/:repo/milestones --jq '.[].title'
      ```
-     Apply only labels that already exist, never invent one, and **never** add it to an estate board.
+     Apply only labels that already exist, never invent one, and **never** wire it into the estate's Linear.
 
 3. **Check for duplicates before drafting.** `gh issue list --state all --limit 100 --search "<key
    terms>"`. If something close already exists, say so and propose commenting on it instead of
@@ -58,9 +58,9 @@ anything else.
 
 5. **Dry run — this is the gate.** Print the full plan and stop:
 
-   | # | Title | Labels | Milestone | Board |
-   |---|---|---|---|---|
-   | 1 | … | `enhancement`, `needs-triage` | v0.2.0 — … | Estate #17 |
+   | # | Title | Labels | Milestone |
+   |---|---|---|---|
+   | 1 | … | `enhancement`, `needs-triage` | v0.2.0 — … |
 
    Show each issue body in full underneath. Then ask for a go-ahead. **Do not create anything until
    the user gives one.** "Looks good" on the brief is not approval to file issues.
@@ -70,17 +70,8 @@ anything else.
    gh issue create --title "…" --body-file <file> \
      --assignee brett-buskirk --label "<type>" --label needs-triage --milestone "<milestone>"
    ```
-   Then, for Brett's own repos only:
-   ```bash
-   gh project item-add 17 --owner brett-buskirk --url <issue-url>
-   ```
-   `item-add` prints nothing on success. Verify rather than assume:
-   ```bash
-   gh project item-list 17 --owner brett-buskirk --format json --limit 500 \
-     --jq '.items[] | select((.repository // "") | test("<repo>"))'
-   ```
-   (Note the field is `.repository` on the item, not `.content.repository`.) If the call fails on
-   scope, the fix is `gh auth refresh -s project`.
+   Issues in Brett's own repos flow into **Linear** automatically through its GitHub integration —
+   there's no manual board step to run.
 
 7. **Record what was filed.** Update the brief's frontmatter `issues: [...]` with the numbers created,
    and land that edit on the brief's own branch — or a small follow-up PR if the brief has already
@@ -96,5 +87,5 @@ anything else.
 - **Never invent a label or a milestone.** If the right one doesn't exist, say so and let the human
   decide whether to create it.
 - **Never file open questions or parking-lot items.** They're marked that way on purpose.
-- **Never touch an estate board from someone else's repo.**
+- **Never apply estate-specific wiring (Linear tracking, estate labels) in someone else's repo.**
 - **Never close, merge, or reprioritise** existing issues. Filing is the whole job.

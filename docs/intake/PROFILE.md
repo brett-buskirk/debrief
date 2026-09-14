@@ -140,8 +140,8 @@ not a change to draft.
 - **Issues:** labels per the table above, plus `needs-triage` on everything generated, and
   `--assignee brett-buskirk`. Milestone: match the ROADMAP phase the item belongs to —
   `v0.1.0 — Foundation`, `v0.2.0 — Round trip`, or `v0.3.0 — Range`. Anything under ROADMAP "Later,"
-  or unphased, gets **no** milestone; say so rather than forcing a fit. Board: **Estate project #17**
-  (`gh project item-add 17 --owner brett-buskirk --url <url>`) — this repo has no board of its own.
+  or unphased, gets **no** milestone; say so rather than forcing a fit. Tracking: **Linear** — issues
+  in this repo sync automatically via Linear's GitHub integration; there's no manual board step.
 - **Briefs:** `docs/intake/YYYY-MM-DD-<slug>.md`, landed by pull request.
 - **Not yet actionable:** the parking lot in the brief. Half-formed thoughts about this tool are
   common and are usually worth more later than they are forced into a ticket now.
